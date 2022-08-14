@@ -1,4 +1,3 @@
-
 " Vim configuration file "
 
 " enable mouse support "
@@ -33,6 +32,9 @@ set shiftwidth	=4
 set textwidth	=79
 set expandtab
 set autoindent
+
+" Terminal Size "
+set termwinsize=15x0
 "
 "" show the matching part of pairs [] {} and () "
 "set showmatch
@@ -40,8 +42,8 @@ set autoindent
 call plug#begin()
 Plug 'preservim/NERDTree'
 Plug 'tpope/vim-fugitive' "Git workflows
-Plug 'tpope/vim-rhubarb' "Git - to go to github link in the browser
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
+"Plug 'tpope/vim-rhubarb' "Git - to go to github link in the browser
+"Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 call plug#end()
 "
