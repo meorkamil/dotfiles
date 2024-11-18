@@ -7,6 +7,9 @@ Plug 'preservim/NERDTree'
 " vim-airline for status line and themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'yami-beta/asyncomplete-omni.vim'
 
 " Terraform syntax support
 Plug 'https://github.com/hashivim/vim-terraform.git'
@@ -72,7 +75,7 @@ set noswapfile
 " -------------------------- Mouse and Input --------------------------
 
 " Enable mouse support in all modes
-set mouse=a
+set mouse=n
 
 " Set appropriate ttymouse for terminal (may vary by terminal type)
 set ttymouse=sgr
@@ -80,11 +83,26 @@ set ttymouse=sgr
 " -------------------------- Govim Settings -----------------------------
 
 " Make Govim more responsive (shorter updatetime and balloondelay)
-set updatetime=5
-set balloondelay=5
+set updatetime=1
+set balloondelay=1
+set timeoutlen=1000 ttimeoutlen=0
 
 " Enable the sign column for quickfix diagnostics
 set signcolumn=number
+
+function! Omni()
+    call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+                    \ 'name': 'omni',
+                    \ 'whitelist': ['go'],
+                    \ 'completor': function('asyncomplete#sources#omni#completor')
+                    \  }))
+endfunction
+
+au VimEnter * :call Omni()
+
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " Enable Go-specific syntax highlighting
 autocmd! BufEnter,BufNewFile *.go,go.mod syntax on
