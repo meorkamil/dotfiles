@@ -7,9 +7,6 @@ Plug 'preservim/NERDTree'
 " vim-airline for status line and themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'yami-beta/asyncomplete-omni.vim'
 
 " Terraform syntax support
 Plug 'https://github.com/hashivim/vim-terraform.git'
@@ -17,8 +14,12 @@ Plug 'https://github.com/hashivim/vim-terraform.git'
 " Go programming support
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }  " Uncomment if you want to use vim-go
 Plug 'govim/govim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'yami-beta/asyncomplete-omni.vim'
 
-" Gruvbox colorscheme
+
+" Colorscheme
 Plug 'morhetz/gruvbox'
 
 call plug#end()
