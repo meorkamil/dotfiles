@@ -125,7 +125,7 @@ set signcolumn=number
 
 " Enable Go-specific syntax highlighting
 autocmd! BufEnter,BufNewFile *.go,go.mod syntax on
-"autocmd! BufLeave *.go,go.mod syntax off
+autocmd! BufLeave *.go,go.mod syntax on
 " -------------------------- Completion and Popup -----------------------------
 
 " Enable popup menu for completion candidates
