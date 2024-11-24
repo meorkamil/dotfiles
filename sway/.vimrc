@@ -8,7 +8,7 @@ Plug 'preservim/NERDTree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
-Plug 'nordtheme/vim'
+Plug 'arcticicestudio/nord-vim'
 
 " Terraform syntax support
 Plug 'https://github.com/hashivim/vim-terraform.git'
@@ -18,13 +18,9 @@ Plug 'govim/govim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'yami-beta/asyncomplete-omni.vim'
 
-" Gruvbox colorscheme
-"Plug 'morhetz/gruvbox'
-
 call plug#end()
 
 " ----------------------------- Key Mappings -----------------------------
-
 " NERDTree key mappings
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
@@ -33,6 +29,11 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
+" ---------------------------- Nord Settings -------------------------------
+set termguicolors
+let g:nord_uniform_diff_background = 1
+let g:nord_bold = 0
+let g:nord_cursor_line_number_background = 1
 " ---------------------------- General Settings ----------------------------
 " Set the colorscheme to Gruvbox
 colorscheme nord
@@ -51,10 +52,6 @@ set linespace=3
 
 " Highlight the current line
 set cursorline
-
-" Airline Theme
-let g:airline_theme = 'cool'
-
 " -------------------------- File Handling and Backup --------------------------
 
 " Disable compatibility mode (Vim defaults)
