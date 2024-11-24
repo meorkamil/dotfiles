@@ -7,6 +7,7 @@ Plug 'preservim/NERDTree'
 " vim-airline for status line and themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 
 " Terraform syntax support
 Plug 'https://github.com/hashivim/vim-terraform.git'
