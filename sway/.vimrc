@@ -30,10 +30,18 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " ---------------------------- Nord Settings -------------------------------
-set termguicolors
+" Use 256 colors if your terminal supports it
+set t_Co=256
+
+" Enable true color support if Vim supports it
+if has("termguicolors")
+  set termguicolors
+endif
+
 let g:nord_uniform_diff_background = 1
 let g:nord_bold = 0
 let g:nord_cursor_line_number_background = 1
+
 " ---------------------------- General Settings ----------------------------
 " Set the colorscheme to Gruvbox
 colorscheme nord
@@ -53,7 +61,6 @@ set linespace=3
 " Highlight the current line
 set cursorline
 " -------------------------- File Handling and Backup --------------------------
-
 " Disable compatibility mode (Vim defaults)
 set nocompatible
 
@@ -69,7 +76,6 @@ set mouse=a
 
 " Set appropriate ttymouse for terminal (may vary by terminal type)
 set ttymouse=sgr
-
 " -------------------------- Govim Settings -----------------------------
 
 " Make Govim more responsive (shorter updatetime and balloondelay)
