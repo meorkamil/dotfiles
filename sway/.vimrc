@@ -36,6 +36,8 @@ let NERDTreeShowHidden=1
 
 " ---------------------------- Nord Settings -------------------------------
 " Use 256 colors if your terminal supports it
+let g:airline_powerline_fonts = 1
+let g:airline_theme='nord'
 set t_Co=256
 set encoding=utf-8
 set fileencoding=utf-8
