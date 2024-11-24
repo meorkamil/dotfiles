@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
 
 " Terraform syntax support
