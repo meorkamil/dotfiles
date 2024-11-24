@@ -17,17 +17,17 @@ window {
 #mode {
     color: @nord0;
     background-color: @nord13;
-    margin-left: 8px;
-    border-radius: 5px;
-    padding: 0px 6px;
+    margin-left: 2px;
+    border-radius: 1px;
+    padding: 0px 3px;
 }
 
 #workspaces button {
-    margin-left: 8px;
+    margin-left: 2px;
     background-color: @nord3;
-    padding: 0px 4px;
+    padding: 0px 2px;
     color: @nord6;
-    margin-top: 0;
+    margin-top: 2px;
 }
 
 #workspaces button.focused {
@@ -36,10 +36,10 @@ window {
 }
 
 #window {
-    margin-left: 10px;
+    margin-left: 2px;
     color: @nord6;
     font-weight: bold;
-    padding: 0px 5px;
+    padding: 0px 2px;
 }
 
 /*
@@ -55,7 +55,7 @@ window {
 #clock,
 #tray {
     background-color: @nord2;
-    padding: 0px 8px;
+    padding: 0px 2px;
     color: @nord6;
 }
 
@@ -64,17 +64,17 @@ window {
 #battery,
 #clock,
 #tray {
-    margin-right: 8px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    margin-right: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 #pulseaudio,
 #network,
 #clock,
 #tray {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
 }
 
 #pulseaudio.muted {
@@ -113,6 +113,6 @@ window {
 #tray menu {
     background-color: @nord2;
     color: @nord4;
-    padding: 10px 5px;
+    padding: 5px 3px;
     border: 2px solid @nord1;
 }
