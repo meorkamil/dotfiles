@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'ryanoasis/vim-devicons'
 
 " Terraform syntax support
 Plug 'https://github.com/hashivim/vim-terraform.git'
@@ -20,6 +21,8 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'yami-beta/asyncomplete-omni.vim'
 
 call plug#end()
+set encoding=UTF-8
+set fileencoding=UTF-8
 
 " ----------------------------- Key Mappings -----------------------------
 " NERDTree key mappings
@@ -33,6 +36,8 @@ let NERDTreeShowHidden=1
 " ---------------------------- Nord Settings -------------------------------
 " Use 256 colors if your terminal supports it
 set t_Co=256
+set encoding=utf-8
+set fileencoding=utf-8
 
 " Enable true color support if Vim supports it
 if has("termguicolors")
@@ -91,6 +96,9 @@ function! Omni()
                     \ 'completor': function('asyncomplete#sources#omni#completor')
                     \  }))
 endfunction
+
+highlight GOVIMSignErr ctermfg=15 ctermbg=1 guisp=Blue guifg=Blue
+call sign_define("GOVIMSignWarn", {"text":"!!","texthl":"GOVIMSignWarn"})
 
 au VimEnter * :call Omni()
 
