@@ -8,6 +8,9 @@ Plug 'preservim/NERDTree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'ryanoasis/vim-devicons'
 
 " Terraform syntax support
 Plug 'https://github.com/hashivim/vim-terraform.git'
@@ -24,6 +27,9 @@ Plug 'yami-beta/asyncomplete-omni.vim'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+set encoding=UTF-8
+set fileencoding=UTF-8
 
 " ----------------------------- Key Mappings -----------------------------
 
@@ -62,7 +68,8 @@ set linespace=3
 set cursorline
 
 " Airline Theme
-let g:airline_theme = 'cool'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='cool'
 
 " -------------------------- File Handling and Backup --------------------------
 
