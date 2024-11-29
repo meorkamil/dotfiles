@@ -12,6 +12,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'bryanmylee/vim-colorscheme-icons'
 
 " Terraform syntax support
 Plug 'https://github.com/hashivim/vim-terraform.git'
@@ -123,9 +124,6 @@ call govim#config#Set("ExperimentalMouseTriggeredHoverPopupOptions", {
 " Enable the sign column for quickfix diagnostics
 set signcolumn=number
 
-" Enable Go-specific syntax highlighting
-autocmd! BufEnter,BufNewFile *.go,go.mod syntax on
-autocmd! BufLeave *.go,go.mod syntax on
 " -------------------------- Completion and Popup -----------------------------
 
 " Enable popup menu for completion candidates
@@ -133,3 +131,6 @@ if has("patch-8.1.1904")
   set completeopt+=popup
   set completepopup=align:menu,border:off,highlight:Pmenu
 endif
+
+highlight GOVIMSignErr ctermfg=15 ctermbg=1 guisp=#bf616a guifg=#bf616a guibg=#3b4252
+call sign_define("GOVIMSignWarn", {"text":"!!","texthl":"GOVIMSignWarn"})
